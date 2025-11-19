@@ -1,0 +1,1222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yukta Vajpayee — Portfolio</title>
+  <meta name="description" content="Yukta Vajpayee — Engineering scalable data & cloud systems. Projects, skills, academics, leadership, and contact." />
+  <meta name="theme-color" content="#8b5cf6" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-dark">
+  <main class="site">
+    <!-- NAV / HEADER CARD -->
+    <header class="card navbar glass">
+      <div class="brand">YUKTA VAJPAYEE</div>
+      <nav class="navlinks" aria-label="Main">
+        <a class="link" href="#hero">Home</a>
+        <a class="link" href="#about">About</a>
+        <a class="link" href="#projects">Projects</a>
+        <a class="link" href="#skills">Skills</a>
+        <a class="link" href="#education">Academics</a>
+        <a class="link" href="#leadership">Leadership</a>
+        <a class="link" href="#contact">Contact</a>
+        <a class="btn" href="/resume.pdf" download>Download Resume</a>
+      </nav>
+    </header>
+
+    <!-- HERO CARD (tab-like top) -->
+    <section id="hero" class="card hero">
+      <!-- Background video (behind hero content) -->
+<video
+  class="hero-video"
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="metadata"
+  poster="assets/images/hero-poster.jpg"
+>
+  <source src="assets/video/hero.webm" type="video/webm" />
+  <source src="assets/video/hero.mp4"  type="video/mp4" />
+  <!-- If neither format is supported, poster image shows -->
+</video>
+      <div class="hero-top">
+        <nav class="tabs" aria-label="Section Tabs">
+          <a class="active" href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div class="section-card hero-main">
+        <div class="hero-pane rounded">
+          <h1>AI and Data Engineer</h1>
+          <p class="sub">Streaming • ETL • Analytics • Reliability</p>
+          <p class="sub sub-role">Actively seeking Summer 2026 Internship</p>
+          <div class="hero-ctas">
+            <a class="btn" href="#projects">View My Work</a>
+            <a class="btn ghost" href="#about">Learn More About Me</a>
+          </div>
+        </div>
+        <div class="section-card" style="padding:0">
+          <div class="hero-icons">
+            <div class="ic">
+              <div class="circle"><img width="28" height="28" src="assets/icons/user.svg" alt="About icon"></div>
+              <span>About Me</span>
+            </div>
+            <div class="ic">
+              <div class="circle"><img width="28" height="28" src="assets/icons/briefcase.svg" alt="Experience icon"></div>
+              <span>Experience</span>
+            </div>
+            <div class="ic">
+              <div class="circle"><img width="28" height="28" src="assets/icons/rocket.svg" alt="Projects icon"></div>
+              <span>Projects</span>
+            </div>
+            <div class="ic">
+              <div class="circle"><img width="28" height="28" src="assets/icons/gear.svg" alt="Skills icon"></div>
+              <span>Skills</span>
+            </div>
+            <div class="ic">
+              <div class="circle"><img width="28" height="28" src="assets/icons/handshake.svg" alt="Leadership icon"></div>
+              <span>Leadership</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ABOUT -->
+<section id="about" class="card section-card about-hero">
+  <!-- looping starfield video -->
+  <video class="about-bg"
+         autoplay
+         muted
+         loop
+         playsinline
+         webkit-playsinline
+         preload="metadata">
+    <source src="assets/video/about-bg-v2.mp4" type="video/mp4" />
+  </video>
+
+<div class="about-head">
+  <!-- Left: title + subtitle stacked -->
+  <div class="about-titles">
+    <h2 class="reveal" data-reveal="up" data-reveal-delay="0">Meet Yukta</h2>
+    <p class="about-sub reveal" data-reveal="up" data-reveal-delay="1">
+      Data & Cloud Engineer <span class="dot">•</span> Architecting Intelligent Systems
+    </p>
+  </div>
+
+  <!-- Right: pill button -->
+  <a href="assets/YuktaVajpayeeResume.pdf"
+     class="btn-ghost reveal"
+     data-reveal="right"
+     data-reveal-delay="2"
+     download>
+    Download Resume
+  </a>
+</div>
+
+  <!-- content grid -->
+  <div class="about-grid">
+    <!-- LEFT: glowing portrait -->
+    <div class="about-left">
+      <div class="avatar-ring reveal" data-reveal="left" data-reveal-delay="1" id="avatarRing">
+        <img src="assets/images/headshot.jpg" alt="Yukta Vajpayee portrait" />
+      </div>
+    </div>
+
+    <!-- RIGHT: copy + chips -->
+    <div class="about-copy">
+      <div class="about-text reveal" data-reveal="up" data-reveal-delay="2">
+        <p>
+          Hey, I’m Yukta Vajpayee, an SDE who writes code that occasionally behaves and systems that sometimes listen.
+          I spend my days convincing APIs to cooperate, data pipelines to stop throwing tantrums, and Kubernetes to not act like it owns the cloud.
+        </p>
+        <p>
+          When I’m not debugging the universe, I’m probably reading a plot twist I didn’t see coming, rewatching a spell gone wrong in Hogwarts,
+          or swimming through life like it’s one long while(true) loop.
+        </p>
+        <p>
+          Oh, and yes, I’m that rare techie who believes Fashion Tech deserves the same respect as a perfect commit message.
+          After all, innovation should look good and run fast. Welcome to my corner, equal parts logic, chaos, and a sprinkle of style.
+        </p>
+      </div>
+
+      <div class="about-links reveal" data-reveal="up" data-reveal-delay="3" aria-label="Activity links">
+        <a class="chip" href="https://your-blog-url.example.com" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 4h14v16H5z" stroke="currentColor" stroke-width="1.5" />
+            <path d="M8 8h8M8 12h8M8 16h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+          Blog
+        </a>
+
+        <a class="chip" href="https://leetcode.com/YOUR_LEETCODE_HANDLE/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17l6-5-6-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="16.5" cy="12" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          LeetCode Progress
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- JOURNEYS (Academic <-> Corporate with page curl) -->
+<section id="journeys" class="card section-card journeys-hero">
+    <video id="journeys-video"
+                 src="/assets/video/academic-bg.mp4"
+                 autoplay muted loop playsinline preload="metadata"
+                 poster="/assets/academics-bg-poster.jpg"></video>
+  <div class="section-head">
+    <h2 class="title">Academic Journey</h2>
+    <button id="journeys-swap" class="mini-link" data-target="corporate"
+            aria-controls="page-corporate" aria-expanded="false">
+      Corporate Journey →
+    </button>
+  </div>
+
+            
+
+  <!-- Book (turning area) -->
+  <div class="book" id="journeys-book">
+    <!-- Sheet = the leaf we animate -->
+    <div class="sheet" id="journeys-sheet" aria-live="polite">
+      <!-- FRONT PAGE: Academics (visible first) -->
+      <div id="page-academics" class="page front" role="region" aria-label="Academic Journey">
+        <section id="academics" class="academics-hero">
+          <h2 class="sr-only">Academic Journey</h2>
+
+          <div class="a-grid">
+            <i class="vtimeline" aria-hidden="true"></i>
+
+            <!-- ROW — Graduate -->
+            <div class="a-row">
+              <i class="vt-node" aria-hidden="true"></i>
+              <div class="study-card reveal" data-reveal="left" data-reveal-delay="1">
+                <div class="study-head">
+                  <h3>Graduate Studies</h3>
+                  <small class="dates">2025 – Present</small>
+                </div>
+                <dl class="study-spec">
+                  <div><dt>University</dt><dd>San José State University</dd></div>
+                  <div><dt>Degree</dt><dd>Master of Science</dd></div>
+                  <div><dt>Major</dt><dd>Computer Science</dd></div>
+                </dl>
+              </div>
+              <div class="connector reveal" data-reveal="up" data-reveal-delay="2" aria-hidden="true"></div>
+              <div class="activity">
+                <div class="activity-card reveal" data-reveal="right" data-reveal-delay="3">
+                  <h4>Activities &amp; Responsibilities</h4>
+                  <ul class="chip-points">
+                    <li>Teaching Assistant for CS200</li>
+                    <li>Developed ML model for course project</li>
+                    <li>Led student hackathon team</li>
+                  </ul>
+                  <ul class="chip-list">
+                    <li class="chip" data-ic="🛂">F1 Visa proof</li>
+                    <li class="chip" data-ic="✨">Adobe Ambassador</li>
+                    <li class="chip" data-ic="👩‍💻">GWC Member</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- ROW — Undergraduate -->
+            <div class="a-row">
+              <i class="vt-node" aria-hidden="true"></i>
+              <div class="study-card reveal" data-reveal="left" data-reveal-delay="1">
+                <div class="study-head">
+                  <h3>Undergraduate Studies</h3>
+                  <small class="dates">2018 – 2022</small>
+                </div>
+                <dl class="study-spec">
+                  <div><dt>University</dt><dd>SRM University</dd></div>
+                  <div><dt>Degree</dt><dd>Bachelor of Technology</dd></div>
+                  <div><dt>Major</dt><dd>Computer Science &amp; Engineering</dd></div>
+                </dl>
+              </div>
+              <div class="connector reveal" data-reveal="up" data-reveal-delay="2" aria-hidden="true"></div>
+              <div class="activity">
+                <div class="activity-card reveal" data-reveal="right" data-reveal-delay="3">
+                  <h4>Activities &amp; Responsibilities</h4>
+                  <ul class="chip-points">
+                    <li>Published research at a national conference</li>
+                    <li>Student body president</li>
+                    <li>Best Final Year Project award</li>
+                  </ul>
+                  <ul class="chip-list">
+                  <li class="chip" data-ic="🏅">C Excellency Award</li>
+                  <li class="chip" data-ic="🥷">Ninja Award</li>
+                </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+     <!-- BACK PAGE: Corporate -->
+<div id="page-corporate" class="page back" role="region" aria-label="Corporate Journey">
+  <section id="corporate" class="corporate-hero">
+    <h2 class="sr-only">Corporate Journey</h2>
+
+    <!-- Timeline wrapper -->
+    <div class="corp-scroll">
+    <ol id="work-timeline" class="corp-tl tl">
+
+      <!-- 1) Most recent — left -->
+      <li class="corp-item">
+        <span class="dot" aria-hidden="true"></span>
+        <article id="job-hpe" class="corp-card job left" data-start="2022" data-end="2025">
+          <header>
+            <h3>Hewlett Packard Enterprises</h3>
+            <div class="role">Data Engineer · Cloud Developer</div>
+            <div class="meta">August 2022 – July 2025 · Bangalore, India</div>
+          </header>
+          <ul class="corp-points">
+            <li data-ic="🛠️">Made machines tattletale on themselves before melting down (geo + temp incident engine).</li>
+            <li data-ic="📈">Gave our edge network a heartbeat and ears, real-time liveness streaming for 100K+ nodes.</li>
+            <li data-ic="🤝">Stopped AI from “making stuff up”, automation now judges its own answers.</li>
+          </ul>
+        </article>
+      </li>
+
+      <!-- 2) Next row — right (intern) -->
+      <li class="corp-item">
+        <span class="dot" aria-hidden="true"></span>
+        <article id="job-hpe-intern" class="corp-card job right" data-start="2022" data-end="2022">
+          <header>
+            <h3>Hewlett Packard Enterprises - Aruba Networking</h3>
+            <div class="role">Software Development Intern</div>
+            <div class="meta">January 2022 - July 2022 · Bangalore, India</div>
+          </header>
+          <ul class="corp-points">
+            <li data-ic="🔐">Shipped OAuth2 SSO for customer tenants.</li>
+            <li data-ic="🚀">Scaled a Go service 5× with Redis caching + async pipelines.</li>
+            <li data-ic="🧪">Added CI/CD checks reducing regressions by 30%.</li>
+          </ul>
+        </article>
+      </li>
+
+      <!-- 3) Older — left -->
+      <li class="corp-item">
+        <span class="dot" aria-hidden="true"></span>
+        <article id="job-tata-internship" class="corp-card job left" data-start="2020" data-end="2020">
+          <header>
+            <h3>TATA Steel: TISCO</h3>
+            <div class="role">Data Engineering Intern</div>
+            <div class="meta">June 2020 – August 2020 · Jamshedpur, IN</div>
+          </header>
+          <ul class="corp-points">
+            <li data-ic="📦">Designed REST APIs (FastAPI + Postgres) for internal tooling.</li>
+            <li data-ic="🧭">Introduced OpenTelemetry tracing; fixed perf hotspots.</li>
+            <li data-ic="📣">Ran Docker/K8s brown-bag sessions for new grads.</li>
+          </ul>
+        </article>
+      </li>
+
+    </ol>
+    </div>
+  </section>
+</div>
+
+
+<!-- Curl overlay SVG (sits on top of the pages while turning) -->
+<svg id="curl-svg"
+     class="curl-svg"
+     viewBox="0 0 1 1"
+     preserveAspectRatio="none"
+     aria-hidden="true">
+  <defs>
+    <!-- Path the JS animates each frame (objectBoundingBox coords 0..1) -->
+    <path id="curl-path" d="M1 1 L1 1 L1 1 Z" />
+
+    <!-- Current page mask: whole page white, hole (curl) black -->
+    <mask id="mask-current" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+      <rect x="0" y="0" width="1" height="1" fill="white" />
+      <use href="#curl-path" fill="black" />
+    </mask>
+
+    <!-- Next page mask: whole page black, hole (curl) white -->
+    <mask id="mask-next" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+      <rect x="0" y="0" width="1" height="1" fill="black" />
+      <use href="#curl-path" fill="white" />
+    </mask>
+
+    <!-- Optional cosmetic “ink” for shadow/highlight -->
+    <linearGradient id="ink-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="rgba(0,0,0,.45)" />
+      <stop offset="1" stop-color="rgba(0,0,0,0)" />
+    </linearGradient>
+  </defs>
+
+  <!-- These two paths reuse the same d= as the curl-path -->
+  <path id="curl-shadow"    d="M1 1 L1 1 L1 1 Z" fill="url(#ink-fade)" opacity=".35" />
+  <path id="curl-highlight" d="M1 1 L1 1 L1 1 Z" fill="white"         opacity=".08" />
+</svg>
+
+  </div>
+</section>
+    <!-- PROJECTS -->
+    <section id="projects" class="card section-card">
+        <div class="bg-video">
+    <video
+      class="bg-video__media"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="assets/images/project-bg.jpg"
+    >
+      <source src="assets/video/project-bg.webm" type="video/webm" />
+      <source src="assets/video/project-bg.mp4" type="video/mp4" />
+    </video>
+  </div>
+      <div class="section-head">
+        <div>
+          <h2>TECHNICAL PROJECTS</h2>
+          <div class="desc">Selected work in streaming, ETL and analytics</div>
+        </div>
+      </div>
+      <div class="proj-grid">
+        <article class="proj-card reveal">
+          <div class="proj-thumb"><img alt="ReSea" src="assets/images/project-4.jpg"/></div>
+          <h3>ReSEA: Residency-Safe Engineering Answers</h3>
+          <p class="desc">A plug-and-play global RAG stack spanning EU, US, and APAC. Smart fan-out, RRF fusion, and federated re-ranking, all in one.</p>
+          <div class="proj-actions">
+            <a class="btn" href="#">Live Demo</a>
+            <a class="btn ghost" href="#">GitHub Repo</a>
+          </div>
+        </article>
+        <article class="proj-card reveal">
+          <div class="proj-thumb"><img alt="Crisis" src="assets/images/project-6.jpg"/></div>
+          <h3>Crisis Aid Cordination AI Agent</h3>
+          <p class="desc">Crisis Aid Coordination Agent bridges donors and disaster relief with AI-driven precision.</p>
+          <div class="proj-actions">
+            <a class="btn" href="#">Live Demo</a>
+            <a class="btn ghost" href="#">GitHub Repo</a>
+          </div>
+        </article>
+        <article class="proj-card reveal">
+          <div class="proj-thumb"><img alt="MimicMind" src="assets/images/project-5.jpg"/></div>
+          <h3>MimicMind.AI</h3>
+          <p class="desc">MimicMind blends AI intuition with engineering precision — propose smart code patches straight from a Jira-like workbench.</p>
+          <div class="proj-actions">
+            <a class="btn" href="#">Live Demo</a>
+            <a class="btn ghost" href="#">GitHub Repo</a>
+          </div>
+        </article>
+        <article class="proj-card reveal">
+          <div class="proj-thumb"><img alt="DataMorph" src="assets/images/project-1.jpg"/></div>
+          <h3>DataMorph: Adaptive ETL for Sensor Streams</h3>
+          <p class="desc">Airflow ETL with dynamic validation and Kafka simulation; cut failures by 40%.</p>
+          <div class="proj-actions">
+            <a class="btn" href="#">Live Demo</a>
+            <a class="btn ghost" href="#">GitHub Repo</a>
+          </div>
+        </article>
+        <article class="proj-card reveal">
+          <div class="proj-thumb"><img alt="LivePulse" src="assets/images/project-2.jpg"/></div>
+          <h3>LivePulse: Real-Time Device Status Analytics</h3>
+          <p class="desc">Spark + Delta Lake processing 5K+ events/sec; reporting latency down 95%.</p>
+          <div class="proj-actions">
+            <a class="btn" href="#">Live Demo</a>
+            <a class="btn ghost" href="#">GitHub Repo</a>
+          </div>
+        </article>
+        <article class="proj-card reveal">
+          <div class="proj-thumb"><img alt="AlertCast" src="assets/images/project-3.jpg"/></div>
+          <h3>AlertCast: Device Health Ticketing</h3>
+          <p class="desc">Go + Kafka pipeline; severity rules generate prioritized tickets automatically.</p>
+          <div class="proj-actions">
+            <a class="btn" href="#">Live Demo</a>
+            <a class="btn ghost" href="#">GitHub Repo</a>
+          </div>
+        </article>
+      </div>
+      <div class="center"><a class="btn" href="#">View All Projects</a></div>
+    </section>
+
+
+<section id="skills" class="card section-card skills-hero">
+
+    <!-- 🔹 Background video -->
+  <div class="bg-video">
+    <video
+      class="bg-video__media"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="assets/images/skills-bg.jpg"
+    >
+      <source src="assets/video/skills-bg.webm" type="video/webm" />
+      <source src="assets/video/skills-bg.mp4"  type="video/mp4" />
+    </video>
+  </div>
+  <h2>Technical Skills</h2>
+
+  <div class="skills-grid">
+
+    <!-- Languages -->
+    <div class="skills-col">
+      <h3>Languages</h3>
+      <ul class="meter-list">
+        <li class="meter" style="--level: 90">
+          <div class="meta"><span>Python</span><span>90%</span></div>
+          <div class="bar"><i></i></div>
+        </li>
+        <li class="meter" style="--level: 85">
+          <div class="meta"><span>Java</span><span>85%</span></div>
+          <div class="bar"><i></i></div>
+        </li>
+        <li class="meter" style="--level: 78">
+          <div class="meta"><span>C / C++</span><span>78%</span></div>
+          <div class="bar"><i></i></div>
+        </li>
+        <li class="meter" style="--level: 75">
+          <div class="meta"><span>SQL</span><span>75%</span></div>
+          <div class="bar"><i></i></div>
+        </li>
+        <li class="meter" style="--level: 70">
+          <div class="meta"><span>TypeScript</span><span>70%</span></div>
+          <div class="bar"><i></i></div>
+        </li>
+        <li class="meter" style="--level: 68">
+          <div class="meta"><span>Go</span><span>68%</span></div>
+          <div class="bar"><i></i></div>
+        </li>
+        <li class="meter" style="--level: 64">
+          <div class="meta"><span>Scala</span><span>64%</span></div>
+          <div class="bar"><i></i></div>
+        </li>
+        <li class="meter" style="--level: 60">
+          <div class="meta"><span>Rust</span><span>60%</span></div>
+          <div class="bar"><i></i></div>
+        </li>
+        <li class="meter" style="--level: 58">
+          <div class="meta"><span>Bash / Shell</span><span>58%</span></div>
+          <div class="bar"><i></i></div>
+        </li>
+        <li class="meter" style="--level: 52">
+          <div class="meta"><span>Ruby</span><span>52%</span></div>
+          <div class="bar"><i></i></div>
+        </li>
+        <li class="meter" style="--level: 50">
+          <div class="meta"><span>Kotlin</span><span>50%</span></div>
+          <div class="bar"><i></i></div>
+        </li>
+        <li class="meter" style="--level: 48">
+          <div class="meta"><span>C# / .NET</span><span>48%</span></div>
+          <div class="bar"><i></i></div>
+        </li>
+        <li class="meter" style="--level: 40">
+          <div class="meta"><span>Swift</span><span>40%</span></div>
+          <div class="bar"><i></i></div>
+        </li>
+        <!-- Keep "OpenCV" under Technologies if you prefer (it's a library),
+             but you can leave it here and set a level as well -->
+      </ul>
+    </div>
+
+    <!-- Technologies -->
+    <div class="skills-col">
+      <h3>Technologies</h3>
+      <ul class="meter-list">
+        <li class="meter" style="--level: 88"><div class="meta"><span>PostgreSQL</span><span>88%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 84"><div class="meta"><span>Kafka</span><span>84%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 80"><div class="meta"><span>Docker</span><span>80%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 78"><div class="meta"><span>MongoDB</span><span>78%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 76"><div class="meta"><span>MySQL</span><span>76%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 72"><div class="meta"><span>Kubernetes</span><span>72%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 70"><div class="meta"><span>Django</span><span>70%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 66"><div class="meta"><span>DynamoDB</span><span>66%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 64"><div class="meta"><span>Trino</span><span>64%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 62"><div class="meta"><span>PinotDB</span><span>62%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 60"><div class="meta"><span>Delta Lake</span><span>60%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 58"><div class="meta"><span>Hive</span><span>58%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 54"><div class="meta"><span>OpenCV</span><span>54%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 52"><div class="meta"><span>RAG Model</span><span>52%</span></div><div class="bar"><i></i></div></li>
+      </ul>
+    </div>
+
+    <!-- DevOps & Cloud -->
+    <div class="skills-col">
+      <h3>DevOps &amp; Cloud</h3>
+      <ul class="meter-list">
+        <li class="meter" style="--level: 82"><div class="meta"><span>AWS (Lambda, Redshift, Athena, EMR)</span><span>82%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 80"><div class="meta"><span>Apache Spark</span><span>80%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 68"><div class="meta"><span>Airflow</span><span>68%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 64"><div class="meta"><span>Git</span><span>64%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 60"><div class="meta"><span>Apache Flink</span><span>60%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 56"><div class="meta"><span>Prometheus</span><span>56%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 52"><div class="meta"><span>Kibana</span><span>52%</span></div><div class="bar"><i></i></div></li>
+        <li class="meter" style="--level: 50"><div class="meta"><span>Delta Lake / DynamoDB</span><span>50%</span></div><div class="bar"><i></i></div></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section id="leadership" class="card section-card lead-hero">
+
+      <!-- 🔹 Background video -->
+  <div class="bg-video">
+    <video
+      class="bg-video__media"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="assets/images/leadership-bg.jpg"
+    >
+      <source src="assets/video/leadership-volunteer.mp4" type="video/webm" />
+      <source src="assets/video/leadership-volunteer.mp4"  type="video/mp4" />
+    </video>
+  </div>
+  <h2>LEADERSHIP &amp; VOLUNTEER WORK</h2>
+
+  <div class="lead-grid">
+    <!-- 1) Adobe Campus Ambassador -->
+    <article class="lead-item">
+      <div class="title">Adobe Campus Ambassador</div>
+      <div class="body">
+        <ul class="lead-list">
+          <li data-ic="📣">Represented Adobe at EduMax and promoted creative tools & learning programs.</li>
+          <li data-ic="🛠️">Created custom tags with Adobe Express and ran the Swag Shop to drive engagement.</li>
+          <li data-ic="🌐">Coordinated with campus communities to expand program visibility and participation.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 2) Secretary · SRMIET On Campus (IET) -->
+    <article class="lead-item">
+      <div class="title">Secretary · SRMIET On Campus (IET)</div>
+      <div class="body">
+        <ul class="lead-list">
+          <li data-ic="📣">Led chapter operations and outreach to grow membership.</li>
+          <li data-ic="🏆">Organized hackathons and a project expo; coordinated judges & sponsors.</li>
+          <li data-ic="🎓">Mentored juniors and facilitated project guidance.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 3) Mentor · MentorTogether (HPE NGO Program) -->
+    <article class="lead-item">
+      <div class="title">Mentor · MentorTogether (HPE NGO Program)</div>
+      <div class="body">
+        <ul class="lead-list">
+          <li data-ic="🎓">Mentored 10+ underprivileged students on CS fundamentals and programming basics.</li>
+          <li data-ic="🤝">Provided one-on-one guidance and checkpoints to track progress.</li>
+          <li data-ic="🏆">Helped learners build confidence and complete milestone projects.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 4) Council Affairs / Lead POC · SRM Model United Nations -->
+    <article class="lead-item">
+      <div class="title">Lead POC · SRM Model United Nations (SRM MUN)</div>
+      <div class="body">
+        <ul class="lead-list">
+          <li data-ic="📣">Promoted SRM MUN across campus & social platforms to increase delegate participation.</li>
+          <li data-ic="🌐">Collaborated with PR & Marketing for engaging digital content and outreach.</li>
+          <li data-ic="🛠️">Coordinated operations with Executive Board and delegates; maintained communications.</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="card section-card">
+      <h2>GET IN TOUCH</h2>
+      <div class="contact-wrap">
+        <form action="https://formspree.io/f/yourFormId" method="POST">
+          <label for="name">Your Name</label>
+          <input id="name" name="name" placeholder="Jane Doe" required />
+          <label for="email">Your Email</label>
+          <input id="email" type="email" name="email" placeholder="jane@company.com" required />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+        <div class="card pad">
+          <p><strong>Elsewhere</strong></p>
+          <p class="desc">Connect with me on:</p>
+          <p><a class="pill" href="https://www.linkedin.com/in/yuktavajpayee30" target="_blank" rel="noopener">LinkedIn</a></p>
+          <p><a class="pill" href="https://github.com/Yukta30" target="_blank" rel="noopener">GitHub</a></p>
+          <p class="desc">yukta.vajpayee@sjsu.edu<br/>+1 (408) 581‑4452</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">© <span id="year"></span> Yukta Vajpayee. Built with semantic HTML & deployed on GitHub Pages.</footer>
+  </main>
+
+  <script src="script.js"></script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const about = document.querySelector('.about-hero');
+    if (!about) return;
+    about.classList.add('is-entering');
+    setTimeout(() => about.classList.remove('is-entering'), 2000);
+  });
+</script>
+
+<script>
+(() => {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  const els = document.querySelectorAll('.reveal');
+  if (!els.length) return;
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const el = entry.target;
+      if (entry.isIntersecting) {
+        // enter viewport -> play
+        el.classList.add('in');
+      } else {
+        // leave viewport -> reset so it can play again when you scroll back
+        el.classList.remove('in');
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '0px 0px -10% 0px',   // begin a bit before fully visible
+    threshold: 0.15                   // ~15% visible to trigger
+  });
+
+  els.forEach(el => io.observe(el));
+})();
+</script>
+
+<!-- Scroll-reveal observer (place before </body>) -->
+<script>
+(() => {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  const els = document.querySelectorAll('.reveal');
+  if (!els.length) return;
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const el = entry.target;
+      if (entry.isIntersecting) {
+        el.classList.add('in');
+      } else {
+        el.classList.remove('in'); // reset so it plays again when you scroll back
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '0px 0px -10% 0px',
+    threshold: 0.15
+  });
+
+  els.forEach(el => io.observe(el));
+})();
+</script>
+
+<script>
+(() => {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  const els = document.querySelectorAll('#academics .reveal');
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');   // triggers the CSS glide-in
+        obs.unobserve(e.target);        // animate once
+      }
+    });
+  }, { root: null, threshold: 0.18 });
+
+  els.forEach(el => io.observe(el));
+})();
+</script>
+
+<script>
+(() => {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.18, rootMargin: "0px 0px -10% 0px" });
+
+  document.querySelectorAll('#projects .proj-card.reveal').forEach(el => io.observe(el));
+})();
+</script>
+
+<script>
+  // Re-animate meters whenever they scroll in/out of view
+  const lists = document.querySelectorAll('#skills .meter-list');
+
+  if (lists.length) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('inview');   // animate to % width
+          } else {
+            e.target.classList.remove('inview'); // reset to 0% so it can re-animate
+          }
+        });
+      },
+      { threshold: 0.25 } // adjust if you want earlier/later triggers
+    );
+
+    lists.forEach((el) => io.observe(el));
+  }
+</script>
+
+<script>
+  // iOS-like reveal for leadership cards + staggered bullets
+  (function () {
+    const cards = document.querySelectorAll('#leadership .lead-item');
+
+    // Precompute stagger index for each bullet
+    cards.forEach((card) => {
+      const items = card.querySelectorAll('.lead-list li');
+      items.forEach((li, i) => li.style.setProperty('--i', i.toString()));
+    });
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('inview');   // play
+          } else {
+            e.target.classList.remove('inview'); // reset to replay later
+          }
+        });
+      },
+      { threshold: 0.22 } // sweet spot for “feels right” trigger
+    );
+
+    cards.forEach((c) => io.observe(c));
+  })();
+</script>
+
+
+
+
+<script>
+(() => {
+  const journeys = document.getElementById('journeys');
+  const book     = document.getElementById('journeys-book');
+  const sheet    = document.getElementById('journeys-sheet');
+  const btn      = document.getElementById('journeys-swap');
+  const titleEl  = document.querySelector('#journeys .section-head .title');
+
+  let pageAcad = document.getElementById('page-academics');
+  let pageCorp = document.getElementById('page-corporate');
+
+  // SVG bits (curl)
+  const curlSVG   = document.getElementById('curl-svg');
+  const pathCurl  = document.getElementById('curl-path');
+  const inkShadow = document.getElementById('curl-shadow');
+  const inkHi     = document.getElementById('curl-highlight');
+
+  let showing = 'academics';
+  let turning = false;
+
+  /* ---------------- utils ---------------- */
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const ease = t => t<.5 ? 2*t*t : 1 - Math.pow(-2*t+2,2)/2;
+
+  const measure = (el) => {
+    // measure the inner section if present (your layout)
+    const s = el.querySelector('section') || el;
+    return s.scrollHeight;
+  };
+
+  const maxHeight = () => Math.max(measure(pageAcad), measure(pageCorp));
+
+  // Height animation (book container)
+  function tweenBookHeight(toPx, dur = 600){
+    const fromPx = book.getBoundingClientRect().height;
+    if (prefersReduced || Math.abs(toPx - fromPx) < 2){
+      book.style.height = toPx + 'px';
+      return { cancel(){}, finished: Promise.resolve() };
+    }
+    book.classList.add('is-sizing');        // hides any bottom gap during tween
+    const anim = book.animate(
+      [
+        { height: fromPx + 'px' },
+        { height: toPx   + 'px' }
+      ],
+      { duration: dur, easing: 'cubic-bezier(.22,.61,.36,1)', fill: 'forwards' }
+    );
+    anim.finished.finally(()=>{
+      book.style.height = toPx + 'px';      // pin final height
+      book.classList.remove('is-sizing');
+    });
+    return anim;
+  }
+
+  // Gentle card reveal on the incoming page
+  function revealCards(container){
+    const cards = container.querySelectorAll('.acad-card, .corp-card, .tl-card, .corp-points li, .acad-points li');
+    let i = 0;
+    cards.forEach(el=>{
+      el.animate(
+        [
+          { opacity: 0, transform: 'translateY(6px)' },
+          { opacity: 1, transform: 'translateY(0)' }
+        ],
+        { duration: 340, easing: 'cubic-bezier(.22,.61,.36,1)', delay: i*26, fill: 'both' }
+      );
+      i++;
+    });
+  }
+
+  function updateSwapUI(which){
+  if (which === 'academics'){
+    // next is Corporate
+    btn.textContent = 'Corporate Journey →';
+    btn.dataset.target = 'corporate';
+    btn.setAttribute('aria-controls', 'page-corporate');
+    btn.setAttribute('aria-expanded', 'false');
+  } else {
+    // next is Academics
+    btn.textContent = 'Academic Journey →';
+    btn.dataset.target = 'academics';
+    btn.setAttribute('aria-controls', 'page-academics');
+    btn.setAttribute('aria-expanded', 'true');
+  }
+}
+
+
+  /* ---------------- roles / titles ---------------- */
+  function setRoles(which){
+    showing = which;
+    [pageAcad, pageCorp].forEach(p=>p.classList.remove('front','back','is-hidden'));
+    if (which === 'academics'){
+      pageAcad.classList.add('front');
+      pageCorp.classList.add('back','is-hidden');
+      journeys.classList.add('is-academics');
+    }else{
+      pageCorp.classList.add('front');
+      pageAcad.classList.add('back','is-hidden');
+      journeys.classList.remove('is-academics');
+    }
+    updateSwapUI(which);
+  }
+
+  // initial layout
+  setRoles('academics');
+  book.style.height = maxHeight() + 'px';
+  addEventListener('resize', () => book.style.height = maxHeight() + 'px');
+
+  /* ---------------- curl shape ---------------- */
+  function updateCurl(t){
+    t = ease(t);
+    const inset = 0.04;
+    const bx=1-inset, by=1-inset;
+    const tx=inset+0.12, ty=inset+0.10;
+    const px = bx + (tx - bx) * t;
+    const py = by + (ty - by) * t;
+    const arc = 0.55 - 0.40*t;
+    const d = [
+      `M ${bx} 1`,
+      `L 1 ${by}`,
+      `Q ${px+arc} ${py+arc} ${px} ${py}`,
+      `Q ${px-arc*0.8} ${py-arc*0.8} ${bx} ${by}`,
+      'Z'
+    ].join(' ');
+    pathCurl.setAttribute('d', d);
+    inkShadow.setAttribute('d', d);
+    inkHi.setAttribute('d', d);
+  }
+
+  function enterStack(){
+    sheet.classList.add('stack');
+    pageAcad.classList.remove('is-hidden');
+    pageCorp.classList.remove('is-hidden');
+    if (curlSVG) curlSVG.style.display = '';
+  }
+  function exitStack(){
+    sheet.classList.remove('stack');
+    (showing === 'academics' ? pageCorp : pageAcad).classList.add('is-hidden');
+  }
+
+  function iosReenterAcademics() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const root = document.querySelector('#page-academics');
+    if (!root) return;
+
+    const easing = 'cubic-bezier(.22,.61,.36,1)';
+    const blocks = [
+      ...root.querySelectorAll('.study-card, .connector, .activity-card')
+    ];
+    const details = [
+      ...root.querySelectorAll('.activity-card li, .study-badges .badge')
+    ];
+
+    blocks.forEach((el, i) => {
+      el.style.willChange = 'transform, opacity';
+      el.animate(
+        [
+          { opacity: 0, transform: 'translateY(18px) scale(.985)' },
+          { opacity: 1, transform: 'translateY(0) scale(1)' }
+        ],
+        { duration: 480, delay: i * 60, easing, fill: 'both' }
+      );
+    });
+
+    const baseDelay = blocks.length * 60 + 100;
+    details.forEach((el, i) => {
+      el.animate(
+        [
+          { opacity: 0, transform: 'translateY(10px) scale(.99)' },
+          { opacity: 1, transform: 'translateY(0) scale(1)' }
+        ],
+        { duration: 360, delay: baseDelay + i * 26, easing, fill: 'both' }
+      );
+    });
+
+    // cleanup
+    const total = baseDelay + details.length * 26 + 420;
+    setTimeout(() => {
+      [...blocks, ...details].forEach(el => (el.style.willChange = ''));
+    }, total + 50);
+  }
+
+
+  /* ---------------- flip with smoother height & content ---------------- */
+function flip(to){
+  if (turning || to === showing) return;
+  turning = true;
+
+  const current = (showing === 'academics') ? pageAcad : pageCorp;
+  const next    = (showing === 'academics') ? pageCorp : pageAcad;
+
+  // ❗ animate to the NEXT page's height, not the max (see #2 below)
+  const targetH = measure(next);
+  const heightDur = prefersReduced ? 0 : 700;
+  const hAnim = tweenBookHeight(targetH, heightDur);
+
+  // stack + prep
+  enterStack();
+  next.style.setProperty('--nextOpacity', '0');
+  current.style.setProperty('--currDim',  '0');
+  current.style.setProperty('--currBlur', '0');
+  updateCurl(0.001);
+
+  // outgoing soft dim/blur
+  const fade = current.animate(
+    [
+      { filter: 'none', opacity: 1 },
+      { filter: 'blur(1.5px) saturate(.95)', opacity: .92 }
+    ],
+    { duration: prefersReduced ? 0 : 380, easing: 'cubic-bezier(.22,.61,.36,1)', fill: 'both' }
+  );
+
+  // incoming x-fade
+  const xfade = next.animate(
+    [{ opacity: 0 }, { opacity: 1 }],
+    { duration: prefersReduced ? 0 : 420, easing: 'cubic-bezier(.22,.61,.36,1)', fill: 'both' }
+  );
+
+  // the curl
+  const curlDur = prefersReduced ? 0 : 1200;
+  const curl = sheet.animate(
+    [
+      { transform: 'translateZ(0) rotateX(0deg)'  },
+      { transform: 'translateZ(0) rotateX(3.5deg)' },
+      { transform: 'translateZ(0) rotateX(0deg)'  }
+    ],
+    { duration: curlDur, easing: 'linear', fill: 'both' }
+  );
+
+  // title swap
+  const nextTitle = (to === 'academics') ? 'Academic Journey' : 'Corporate Journey';
+  setTimeout(()=> typeSwap(nextTitle), prefersReduced ? 0 : 140);
+
+  curl.finished.finally(()=>{
+    // 🔧 IMPORTANT: clear all animation side-effects so no blur sticks
+    try { fade.cancel(); } catch {}
+    try { xfade.cancel(); } catch {}
+    current.style.filter = '';
+    current.style.opacity = '';
+    next.style.opacity = '';
+    next.style.removeProperty('--nextOpacity');
+    current.style.removeProperty('--currDim');
+    current.style.removeProperty('--currBlur');
+
+    setRoles(to);
+    exitStack();
+    if (to === 'academics') {
+      iosReenterAcademics();
+    } else {
+      // keep your corporate reveal if you want a pop there
+      revealCards(pageCorp);
+    }
+
+    hAnim.finished.finally(()=>{
+      // pin to the actual current page's height (in case content changed)
+      book.style.height = measure((showing === 'academics') ? pageAcad : pageCorp) + 'px';
+      turning = false;
+    });
+  });
+}
+
+
+
+
+  /* ---------------- title typewriter ---------------- */
+  async function typeSwap(text){
+    const orig = titleEl.textContent || '';
+    // erase
+    for (let i=orig.length; i>=0; i--){
+      titleEl.textContent = orig.slice(0, i);
+      await new Promise(r=>setTimeout(r, 18));  // slightly slower
+    }
+    // type
+    for (let i=0; i<=text.length; i++){
+      titleEl.textContent = text.slice(0, i);
+      await new Promise(r=>setTimeout(r, 22));
+    }
+  }
+
+  btn.addEventListener('click', () => {
+    flip(showing === 'academics' ? 'corporate' : 'academics');
+  });
+})();
+</script>
+
+
+
+<script>
+(() => {
+  const tl = document.getElementById('work-timeline'); // <ol id="work-timeline" class="corp-tl">
+  if (!tl) return;
+
+  // Get rows and sort newest → oldest (by data-end then data-start)
+  const rows = [...tl.querySelectorAll('.corp-item')];
+  rows.sort((a, b) => {
+    const A = a.querySelector('.job'), B = b.querySelector('.job');
+    const ae = +((A?.dataset.end)   || 0);
+    const be = +((B?.dataset.end)   || 0);
+    const as = +((A?.dataset.start) || 0);
+    const bs = +((B?.dataset.start) || 0);
+    if (be !== ae) return be - ae;
+    return bs - as;
+  });
+
+  // Place: L on rows 1,5,9…  |  R on rows 3,7,11…
+  // That leaves a blank row between left cards; the right card lives in the middle row.
+  rows.forEach((li, i) => {
+    const card = li.querySelector('.job');
+    const dot  = li.querySelector('.dot');
+    if (!card || !dot) return;
+
+    const side = (i % 2 === 0) ? 'left' : 'right'; // start from LEFT
+    card.classList.remove('left','right');
+    card.classList.add(side);
+
+    // compute grid row: odd indices are the "between" row
+    const row = (side === 'left')
+      ? (i * 2 + 1)          // 1, 5, 9, ...
+      : (i * 2 + 1);         // 3, 7, 11, ... because i is odd here
+
+    // assign the row to both the card and its center dot
+    card.style.gridRow = row;
+    dot.style.gridRow  = row;
+
+    tl.appendChild(li); // keep DOM order to match the visual order
+  });
+})();
+</script>
+
+<script>
+(() => {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  const easing = 'cubic-bezier(.22,.61,.36,1)';
+  const scroller = document.querySelector('.corp-scroll');
+  const cards  = scroller ? scroller.querySelectorAll('.corp-card') : [];
+  if (!scroller || !cards.length) return;
+
+  // initial hidden state
+  cards.forEach(card => {
+    card.style.opacity   = '0';
+    card.style.transform = 'translateY(18px) scale(.985)';
+    card.style.willChange = 'transform, opacity';
+  });
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const card = entry.target;
+
+      card.animate(
+        [
+          { opacity: 0, transform: 'translateY(18px) scale(.985)' },
+          { opacity: 1, transform: 'translateY(0) scale(1)' }
+        ],
+        { duration: 520, easing, fill: 'both' }
+      );
+
+      const items = card.querySelectorAll('.corp-points li');
+      items.forEach((li, i) => {
+        li.style.opacity   = '0';
+        li.style.transform = 'translateY(10px) scale(.99)';
+        li.animate(
+          [
+            { opacity: 0, transform: 'translateY(10px) scale(.99)' },
+            { opacity: 1, transform: 'translateY(0) scale(1)' }
+          ],
+          { duration: 360, delay: 100 + i * 26, easing, fill: 'both' }
+        );
+      });
+
+      obs.unobserve(card);                    // play once per card
+      const total = 100 + items.length * 26 + 420;
+      setTimeout(() => { card.style.willChange = ''; }, total);
+    });
+  }, {
+    root: scroller,             // ← observe inside the internal scroller
+    threshold: 0.32,
+    rootMargin: '0px 0px -10% 0px'
+  });
+
+  cards.forEach(c => io.observe(c));
+})();
+</script>
+
+<script>
+  window.addEventListener('load', () => {
+    const v = document.querySelector('#skills .bg-video__media');
+    v && v.play && v.play().catch(()=>{});
+  });
+</script>
+
+
+
+</body>
+</html>
