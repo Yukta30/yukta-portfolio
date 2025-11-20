@@ -75,3 +75,47 @@ document.querySelectorAll('.reveal-on-scroll').forEach(el => revealIO.observe(el
 
 // Year
 document.getElementById('year')?.textContent = new Date().getFullYear();
+
+
+(() => {
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+
+  const status = document.getElementById("contact-status");
+  const button = form.querySelector('button[type="submit"]');
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const payload = {
+      name: form.elements.name.value.trim(),
+      email: form.elements.email.value.trim(),
+      message: form.elements.message.value.trim(),
+    };
+
+    button.disabled = true;
+    const label = button.textContent;
+    button.textContent = "Sending…";
+    status.textContent = "";
+
+    try {
+      const r = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const json = await r.json().catch(() => ({}));
+      if (!r.ok || !json.ok) throw new Error(json.error || "Request failed");
+
+      form.reset();
+      status.textContent = "Thanks! I’ll get back to you shortly.";
+    } catch (err) {
+      console.error(err);
+      status.textContent =
+        "Sorry—something went wrong. You can also email me at yukta.vajpayee@sjsu.edu.";
+    } finally {
+      button.disabled = false;
+      button.textContent = label;
+    }
+  });
+})();
