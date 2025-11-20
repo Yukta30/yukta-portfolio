@@ -1,3 +1,5 @@
 node_modules/
 dist/
 .DS_Store
+assets/video/academic-bg.mp4
+assets/video/project-bg.mp4
