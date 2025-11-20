@@ -640,32 +640,36 @@
 </section>
 
 
-    <!-- CONTACT -->
-    <section id="contact" class="card section-card">
-      <h2>GET IN TOUCH</h2>
-      <div class="contact-wrap">
-        <form id="contact-form" novalidate>
-  <label for="name">Your Name</label>
-  <input id="name" name="name" required />
+<section id="contact" class="card section-card">
+  <h2>GET IN TOUCH</h2>
 
-  <label for="email">Your Email</label>
-  <input id="email" name="email" type="email" required />
+  <div class="contact-wrap">
+    <!-- Use your own API: no action, method is handled by JS -->
+    <form id="contact-form" autocomplete="on" novalidate>
+      <label for="name">Your Name</label>
+      <input id="name" name="name" placeholder="Jane Doe" required />
 
-  <label for="message">Message</label>
-  <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="email">Your Email</label>
+      <input id="email" type="email" name="email" placeholder="jane@company.com" required />
 
-  <button type="submit">Send Message</button>
-  <p id="contact-status" aria-live="polite"></p>
-</form>
-        <div class="card pad">
-          <p><strong>Elsewhere</strong></p>
-          <p class="desc">Connect with me on:</p>
-          <p><a class="pill" href="https://www.linkedin.com/in/yuktavajpayee30" target="_blank" rel="noopener">LinkedIn</a></p>
-          <p><a class="pill" href="https://github.com/Yukta30" target="_blank" rel="noopener">GitHub</a></p>
-          <p class="desc">yukta.vajpayee@sjsu.edu<br/>+1 (408) 581‑4452</p>
-        </div>
-      </div>
-    </section>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+
+      <button class="btn btn-gradient" type="submit">Send Message</button>
+
+      <!-- status/acknowledgement area -->
+      <p id="contact-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <div class="card pad">
+      <p><strong>Elsewhere</strong></p>
+      <p class="desc">Connect with me on:</p>
+      <p><a class="pill" href="https://www.linkedin.com/in/yuktavajpayee30" target="_blank" rel="noopener">LinkedIn</a></p>
+      <p><a class="pill" href="https://github.com/Yukta30" target="_blank" rel="noopener">GitHub</a></p>
+      <p class="desc">yukta.vajpayee@sjsu.edu<br/>+1 (408) 581-4452</p>
+    </div>
+  </div>
+</section>
 
     <footer class="footer">© <span id="year"></span> Yukta Vajpayee. Built with semantic HTML & deployed on GitHub Pages.</footer>
   </main>
