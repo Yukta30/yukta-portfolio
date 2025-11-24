@@ -6421,6 +6421,377 @@ input:focus, textarea:focus{outline:none; box-shadow:0 0 0 4px rgba(139,92,246,.
 
 
 
+/* ---- Base containment (prevents stray horizontal scroll) ---- */
+.site { max-width: 1160px; margin-inline: auto; padding-inline: 16px; }
+img, video, svg { max-width: 100%; height: auto; display: block; }
+
+/* ---- NAVBAR ---- */
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 16px;
+}
+.navbar .brand { white-space: nowrap; }
+.navbar .navlinks {
+  display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center;
+}
+.navbar .navlinks .btn { margin-left: auto; }
+
+/* Stack brand above links on narrow screens */
+@media (max-width: 900px){
+  .navbar { grid-template-columns: 1fr; }
+  .navbar .navlinks { justify-content: center; }
+  .navbar .navlinks .btn { margin-left: 0; }
+}
+
+/* --- Responsive stack for the hero section --- */
+
+/* 2 columns by default */
+.hero-main{
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+}
+/* allow children to shrink so they don't cause overflow */
+.hero-main > * { min-width: 0; }
+
+/* Stack to one column on small screens */
+@media (max-width: 900px){
+  .hero-main{ grid-template-columns: 1fr; }
+  .hero-pane{ text-align: center; }
+  .hero-ctas{ display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
+}
+
+
+/* <=420px: force 3 on row 1, remaining wrap centered on row 2 */
+@media (max-width: 420px){
+
+  .hero{ position: relative; overflow: hidden; min-height: 420px; }
+
+  /* bottom layer */
+  .hero-video{
+    display: block !important;
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 0;            /* BACK */
+    opacity: .22;
+    pointer-events: none;
+  }
+
+  /* middle layer: darken for readability */
+  .hero::after{
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.45));
+    z-index: 1;           /* OVER the video */
+  }
+
+  /* top layer: your content */
+  .hero .hero-top,
+  .hero .hero-main{ position: relative; z-index: 2; }
+
+  .hero-icons{
+    display: flex !important;            /* kill any grid rules */
+    grid-template-columns: unset !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;   /* center each line */
+    gap: 2px 3px;                        /* row | column gap */
+    padding: 8px 6px;
+    width: 100%;
+    margin-left: -10px;
+  }
+
+  /* base: 2 per row (for the wrapped line) */
+  .hero-icons .ic{
+    box-sizing: border-box;
+    flex: 0 0 calc(30% - 10px) !important;
+    max-width: calc(30% - 10px) !important;
+    margin: 0 !important;
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    min-width: 0; text-align: center;
+  }
+
+  /* first three → 3-up on the first row */
+  .hero-icons .ic:nth-child(-n+3){
+    flex-basis: calc(33.333% - 6px) !important;
+    max-width:  calc(33.333% - 10px) !important;
+  }
+
+  /* 2 on the second row — reduce the space between them */
+  .hero-icons .ic:nth-child(n+4){
+    flex-basis: calc(20% - 1px);  /* was 50% - 10px */
+    max-width:  calc(20% - 1px);
+  }
+
+  /* make sure labels never force width */
+  .hero-icons .ic span{ white-space: normal; overflow-wrap: anywhere; }
+}
+
+
+
+@media (max-width: 600px){
+  .hero{ position: relative; overflow: hidden; min-height: 420px; }
+
+  /* bottom layer */
+  .hero-video{
+    display: block !important;
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 0;            /* BACK */
+    opacity: .22;
+    pointer-events: none;
+  }
+
+  /* middle layer: darken for readability */
+  .hero::after{
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.45));
+    z-index: 1;           /* OVER the video */
+  }
+
+  /* top layer: your content */
+  .hero .hero-top,
+  .hero .hero-main{ position: relative; z-index: 2; }
+  .hero-icons{
+    display: flex !important;            /* kill any grid rules */
+    grid-template-columns: unset !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;   /* center each line */
+    gap: 2px 3px;                        /* row | column gap */
+    padding: 8px 6px;
+    width: 100%;
+    margin-left: -10px;
+  }
+
+  /* base: 2 per row (for the wrapped line) */
+  .hero-icons .ic{
+    box-sizing: border-box;
+    flex: 0 0 calc(30% - 10px) !important;
+    max-width: calc(30% - 10px) !important;
+    margin: 0 !important;
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    min-width: 0; text-align: center;
+  }
+
+  /* first three → 3-up on the first row */
+  .hero-icons .ic:nth-child(-n+3){
+    flex-basis: calc(33.333% - 6px) !important;
+    max-width:  calc(33.333% - 10px) !important;
+  }
+
+  /* 2 on the second row — reduce the space between them */
+  .hero-icons .ic:nth-child(n+4){
+    flex-basis: calc(20% - 1px);  /* was 50% - 10px */
+    max-width:  calc(20% - 1px);
+  }
+
+  /* make sure labels never force width */
+  .hero-icons .ic span{ white-space: normal; overflow-wrap: anywhere; }
+}
+
+
+
+@media (max-width: 380px){
+  .card.section-card.about-hero{            /* same element, no space */
+    position: relative;                     /* anchor ::after + video */
+    overflow: hidden;
+    background: transparent !important;     /* don't cover the video */
+  }
+  .card.section-card.about-hero::before{    /* if your glass effect uses ::before */
+    content: none !important;               /* remove opaque layer for this section */
+  }
+
+  /* Layering: video (0) -> overlay (1) -> content (2) */
+  .about-hero .about-bg{
+    display: block !important;
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: .22;
+    pointer-events: none;
+    z-index: 0;                              /* keep inside the section’s stack */
+  }
+  .about-hero::after{
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.45));
+    z-index: 1;
+  }
+  .about-hero > *:not(.about-bg){
+    position: relative; 
+    z-index: 2;                              /* ❌ was 1; keep content above veil */
+  }
+
+
+  .about-head{ padding: 12px 14px; gap: 12px; }
+  .about-grid{ padding: 0 14px 16px; gap: 14px; }
+
+  .about-titles h2{ font-size: clamp(20px, 6vw, 24px); }
+  .about-sub{ font-size: clamp(12px, 4vw, 14px); }
+
+  .about-links{ gap: 8px; }
+  .about-links .chip{ padding: 9px 11px; }
+}
+
+/* Safety: avoid horizontal overflow */
+@media (max-width: 680px){
+  .about-hero, .about-head, .about-grid, .about-left, .about-copy{ min-width: 0; }
+}
+
+@media (max-width: 420px){
+
+  /* Parent grid becomes a simple flow so rows can stack cleanly */
+  #academics .a-grid{
+    display: block !important;
+    position: relative;
+  }
+
+  /* Each academic row becomes a vertical stack:
+     [Study card]
+     (connector â€“ optional/short)
+     [Activity card]
+  */
+  #academics .a-row{
+    position: relative;
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px;        /* gutter for timeline line + node */
+    margin-bottom: 14px;
+    padding-left: 36px;      /* was 26px */
+    padding-right: 36px;
+    align-items: center; 
+  }
+
+  /* Ensure children can shrink/wrap inside the flex column */
+  #academics .a-row > *{
+    min-width: 0;
+  }
+
+  /* Order within the row */
+  #academics .a-row > .study-card{ order: 1; }
+  #academics .a-row > .connector{  order: 2; }
+  #academics .a-row > .activity{   order: 3; display: flex;                 /* make wrapper a flex row */
+  justify-content: center;  }
+
+  /* Short, subtle connector between the two cards */
+  #academics .connector{
+    height: 8px;
+    margin-left: 0;                  /* uses the row's left padding */
+    border-left: 2px solid rgba(255,255,255,.12);
+  }
+
+  /* Timeline spine and node on the left */
+  #academics .vtimeline{
+    position: absolute; left: 10px; top: 0; bottom: 0;
+    width: 2px; border-radius: 2px;
+    background: linear-gradient(180deg, rgba(255,255,255,.15), rgba(255,255,255,.05));
+    pointer-events: none;
+  }
+  #academics .vt-node{
+    position: absolute; left: 3px; top: 14px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: #fff6;
+    box-shadow: 0 0 0 3px rgba(255,255,255,.12);
+    pointer-events: none;
+  }
+
+  /* Card shells */
+  #academics .study-card,
+  #academics .activity-card{
+    background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 14px;
+    padding: 12px;
+    width: auto !important;          /* override any 100% elsewhere */
+    max-width: 85%;                  /* smaller than row width */
+    margin-inline: auto;             /* center horizontally */
+    box-sizing: border-box;          /* keep padding inside max-width */
+    z-index: 1;
+  }
+
+  /* Normalize text flow to avoid "vertical" letter-stacking on narrow chips/lists */
+  #academics .activity-card,
+  #academics .activity-card *{
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: anywhere;
+  }
+
+  #academics .a-row .activity .activity-card{
+  width: auto !important;        /* defeat any width:100% rules */
+  max-width: 88%;                /* tweak as you like (90–92% also fine) */
+  margin-inline: auto !important;
+  box-sizing: border-box;
+}
+
+  /* Lists inside the activity card */
+
+  #academics .chip-points li{
+    display: list-item;
+    margin: 6px auto; 
+    font-size: 13px;
+    line-height: 1.35;
+    display: flex;                   /* keep emoji + text aligned */
+    align-items: center;
+    width: fit-content; 
+    max-width: 92%;
+  }
+
+  #academics .chip-list{
+    display: flex; flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;  
+    margin-left: -40px !important;
+  }
+  #academics .chip-list .chip{
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.12);
+    justify-content: center;  
+  }
+
+  #academics .activity-card .chip-points{
+  display: flex;                  /* stack as a column */
+  flex-direction: column;
+  align-items: center;            /* center the children */
+  padding-left: 0;
+  list-style: none;
+  margin-left: 10px !important;
+}
+
+#academics .activity-card .chip-points li{
+  width: min(80%, 300px);            /* narrower than the card, centered */
+  margin: 8px auto;                  /* center horizontally */
+  padding: 10px 14px 10px 18px;      /* ⬅ extra 4px on the left to offset the emoji */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center; /* <<< narrower than the card, centered */      /* center horizontally */
+  justify-content: flex-start;        /* keep emoji + text left inside the pill */
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
 
