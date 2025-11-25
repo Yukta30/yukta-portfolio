@@ -5448,6 +5448,36 @@ input:focus, textarea:focus{outline:none; box-shadow:0 0 0 4px rgba(139,92,246,.
 
 
 
+/* Soft, continuous glow for Corporate Journey button */
+@keyframes journeysSwapGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255,255,255,0.10);
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px 6px rgba(255,255,255,0.35);  /* peak glow */
+    transform: translateX(0) scale(1.02);             /* tiny breath */
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255,255,255,0.10);
+    transform: translateX(0) scale(1);
+  }
+}
+
+#journeys-swap.journeys-attn{
+  animation: journeysSwapGlow 3s ease-in-out infinite;
+}
+
+/* Accessibility: disable for reduce-motion users */
+@media (prefers-reduced-motion: reduce){
+  #journeys-swap.journeys-attn{
+    animation: none;
+    box-shadow: 0 0 12px 4px rgba(255,255,255,0.25); /* static glow fallback */
+  }
+}
+
+
+
 
 
 /* Just a little inner padding so content doesn’t hug the edge */
