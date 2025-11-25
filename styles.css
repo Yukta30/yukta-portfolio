@@ -6239,10 +6239,111 @@ input:focus, textarea:focus{outline:none; box-shadow:0 0 0 4px rgba(139,92,246,.
 
 /* 3) Tiny phones polish */
 @media (max-width: 420px){
+
+
+  /* Center the text/contents inside the Download button */
+#about .btn-ghost{
+  font-size: 0.75rem; 
+  display: inline-flex;           /* let us center content */
+  align-items: center;            /* vertical center */
+  justify-content: center;        /* horizontal center */
+  height: 38px;                   /* pill height (tweak 36–40px) */
+  padding: 0 14px;                /* even left/right padding */
+  line-height: 1;                 /* avoid tall line box pushing text */
+  box-sizing: border-box;         /* include border in height */
+  text-align: center;
+  white-space: nowrap;            /* keep on one line */
+  border-radius: 999px;           /* pill shape */
+}
+
+#about .about-sub{
+  font-size: 0.8rem;
+}
+
+/* If there’s an icon inside, keep spacing tidy */
+#about .btn-ghost > svg{
+  flex: 0 0 auto;
+  margin-right: 8px;              /* only if you have an icon */
+}
+  
   #about h2{ font-size: clamp(1.1rem, 6vw, 1.35rem); }
   #about p{  font-size: clamp(.95rem, 4.2vw, 1.05rem); }
   #about .about-portrait,
-  #about .avatar{ width: min(230px, 70vw); }
+  #about .about-left .avatar-ring{
+    /* size — make smaller and guarantee perfect circle */
+    width: min(170px, 56vw) !important;   /* tweak 160–190px to taste */
+    aspect-ratio: 1 / 1;
+    margin: 10px auto 4px;
+    /* geometry */
+    position: relative;
+    border-radius: 50%;
+    box-sizing: border-box;
+    overflow: hidden;                      /* clip inner overlay to border */
+    /* one subtle border; remove if you have your own */
+    border: 2px solid rgba(170,120,255,.35);
+    /* kill any transforms that may skew into an oval */
+    box-shadow:
+      0 0 0   1px rgba(170,120,255,.30),   /* faint rim */
+      0 0 22px  8px rgba(170,120,255,.35), /* near glow */
+      0 0 64px 18px rgba(110,90,255,.22);  /* far glow */
+    transform: none !important;
+    margin-bottom: -10px;
+  }
+
+  /* The actual image — fills the circle */
+  #about .about-left .avatar-ring > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  /* Hide legacy decorative layers that create extra circles (optional) */
+  #about .about-left .avatar-ring .ring,
+  #about .about-left .avatar-ring .halo{
+    display: none !important;
+  }
+
+  /* Inner darkening sits INSIDE the border (not a second ring) */
+  #about .about-left .avatar-ring::after{
+    content: "";
+    position: absolute; inset: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    /* spreads inside via a huge inset shadow */
+    box-shadow: inset 0 0 0 9999px rgba(8, 10, 22, .18);
+  }
+
+  /* Optional soft neon glow behind the circle (kept subtle on mobile) */
+  #about .about-left .avatar-ring::before{
+    content: "";
+    position: absolute; inset: -10%;
+    border-radius: 50%;
+    background: conic-gradient(from 220deg,
+                rgba(190,120,255,.20),
+                rgba(120,180,255,.20),
+                transparent 60%);
+    filter: blur(10px);
+    z-index: -1;            /* sits behind the clipped circle */
+  }
+
+  #about .about-grid .about-copy .about-text p{
+    font-size: 0.75rem;
+  }
+
+
+   #about .about-links .chip{
+    font-size: 0.75rem;        /* ~12px text */
+    padding: 6px 10px;         /* smaller pill */
+    gap: 6px;                  /* space between icon + text */
+  }
+
+  /* Optional: shrink the icons a bit too */
+  #about .about-links .chip svg{
+    width: 14px;
+    height: 14px;
+  }
 }
 
 /* 4) If your section uses .a-row/.activity cards, make them wrap nicely */
@@ -6490,7 +6591,8 @@ img, video, svg { max-width: 100%; height: auto; display: block; }
 
   /* top layer: your content */
   .hero .hero-top,
-  .hero .hero-main{ position: relative; z-index: 2; }
+  .hero .hero-main{ align-items: center; position: relative; z-index: 2; padding-inline: 16px; display: flex;
+    flex-direction: column; margin-left: 25px; }
 
   .hero-icons{
     display: flex !important;            /* kill any grid rules */
@@ -6728,6 +6830,11 @@ img, video, svg { max-width: 100%; height: auto; display: block; }
   max-width: 88%;                /* tweak as you like (90–92% also fine) */
   margin-inline: auto !important;
   box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#academics .study-card{
+  margin-top: 10px;
 }
 
   /* Lists inside the activity card */
