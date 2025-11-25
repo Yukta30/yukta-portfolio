@@ -76,3 +76,21 @@ document.querySelectorAll('.reveal-on-scroll').forEach(el => revealIO.observe(el
 // Year
 document.getElementById('year')?.textContent = new Date().getFullYear();
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('journeys-swap');
+  if (!btn) return;
+
+  // add the class shortly after load so it feels intentional
+  setTimeout(() => {
+    btn.classList.add('journeys-attn');
+
+    // once the animation finishes, remove the class
+    btn.addEventListener(
+      'animationend',
+      () => btn.classList.remove('journeys-attn'),
+      { once: true }
+    );
+  }, 800); // 0.8s delay – tweak if you like
+});
+
