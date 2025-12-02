@@ -2077,7 +2077,6 @@ input:focus, textarea:focus{outline:none; box-shadow:0 0 0 4px rgba(139,92,246,.
   margin-inline: auto !important;
   padding: 10px 0 36px 0 !important;
   margin-block: auto;
-  box-sizing: border-box;
   transform: translateY(var(--cluster-shift, 0px));
 }
 
@@ -4409,12 +4408,7 @@ input:focus, textarea:focus{outline:none; box-shadow:0 0 0 4px rgba(139,92,246,.
   position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
   z-index:0; filter:saturate(1.05) brightness(.58);
 }
-#journeys.section-card.journeys-hero::after{
-  content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
-  background:
-    radial-gradient(120% 90% at 50% -10%, rgba(136,104,255,.32), rgba(0,0,0,.70)),
-    linear-gradient(to bottom, rgba(0,0,0,.15), rgba(0,0,0,.55));
-}
+
 /* keep all real content above */
 #journeys > *:not(#journeys-video){ position:relative; z-index:2; }
 
@@ -4433,7 +4427,12 @@ input:focus, textarea:focus{outline:none; box-shadow:0 0 0 4px rgba(139,92,246,.
 /* ===========================
    ACADEMICS PAGE
    =========================== */
-#page-academics .academics-hero{ position:relative; }
+#page-academics .academics-hero{ 
+  position:relative;
+  background: transparent !important;
+  box-shadow: none;          /* if you had a card shadow */
+  border: none;
+ }
 #page-academics .a-grid{
   position:relative;
   max-width:1100px;
@@ -4462,18 +4461,7 @@ input:focus, textarea:focus{outline:none; box-shadow:0 0 0 4px rgba(139,92,246,.
 
 
 
-/* big 3-D glass panel that encloses the whole row content */
-#page-academics .a-row::before{
-  content:"";
-  position:absolute; inset:0; border-radius:inherit; z-index:1;
-  background:
-    radial-gradient(80% 70% at 18% 40%, rgba(150,120,255,.10), transparent 60%),
-    linear-gradient(180deg, rgba(24,22,40,.92), rgba(10,10,18,.80));
-  box-shadow:
-    0 26px 64px rgba(0,0,0,.55),
-    0 0 0 2px rgba(190,175,255,.70),
-    0 0 0 10px rgba(126,96,255,.20);
-}
+
 #page-academics .a-row::after{
   content:"";
   position:absolute; inset:2px; border-radius: calc(var(--row-radius) - 2px); z-index:1;
@@ -4553,15 +4541,7 @@ input:focus, textarea:focus{outline:none; box-shadow:0 0 0 4px rgba(139,92,246,.
    (safe overrides; scoped to #page-academics)
    ============================================ */
 
-#page-academics .a-row::before{
-  background:
-    radial-gradient(90% 75% at 16% 40%, rgba(155,130,255,.12), transparent 60%),
-    linear-gradient(180deg, rgba(18,16,32,.94), rgba(8,7,14,.86));
-  box-shadow:
-    0 30px 70px rgba(0,0,0,.58),
-    0 0 0 2px rgba(190,175,255,.78),
-    0 0 0 12px rgba(122,96,255,.22);
-}
+
 #page-academics .a-row::after{
   inset: 2px;
   background: linear-gradient(145deg,
@@ -4634,17 +4614,7 @@ input:focus, textarea:focus{outline:none; box-shadow:0 0 0 4px rgba(139,92,246,.
   z-index:0; pointer-events:none;
 }
 
-#page-academics .a-row::before{
-  content:""; position:absolute; inset:0; border-radius:inherit;
-  background:
-    radial-gradient(90% 75% at 18% 30%, rgba(160,130,255,.10), transparent 60%),
-    linear-gradient(180deg, rgba(22,18,38,.94), rgba(10,9,18,.86));
-  box-shadow:
-    0 26px 60px rgba(0,0,0,.55),
-    0 0 0 2px rgba(190,175,255,.65),
-    0 0 0 10px rgba(120,96,255,.18);
-  z-index:-1;
-}
+
 /* subtle inner bevel */
 #page-academics .a-row::after{
   content:""; position:absolute; inset:2px; border-radius:calc(var(--rowR) - 2px);
@@ -4889,7 +4859,7 @@ input:focus, textarea:focus{outline:none; box-shadow:0 0 0 4px rgba(139,92,246,.
 }
 
 /* (keep the row panel itself below the spine glow) */
-#page-academics .a-row::before{ z-index: 0; }
+
 #page-academics .a-row::after{  z-index: 1; }
 #page-academics .a-row > *{     z-index: 2; position: relative; }
 
@@ -5589,7 +5559,7 @@ input:focus, textarea:focus{outline:none; box-shadow:0 0 0 4px rgba(139,92,246,.
   background: transparent !important;
   box-shadow: none !important;
   outline: 0 !important;
-  border: 0 !important;
+  border: none !important;
 }
 
 /* Nuke any gradient/shine added with pseudo-elements */
@@ -6914,6 +6884,73 @@ img, video, svg { max-width: 100%; height: auto; display: block; }
   align-items: center; /* <<< narrower than the card, centered */      /* center horizontally */
   justify-content: flex-start;        /* keep emoji + text left inside the pill */
 }
+}
+
+/* Uniform background for the whole Academic Journey section */
+#journeys.section-card.journeys-hero::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  /* pick any color you like here */
+  background: linear-gradient(180deg, #120d22, #120d22);
+  /* or simply: background: #120d22; */
+}
+
+/* Make the big academics panel transparent */
+#page-academics,
+#page-academics .academics-hero,
+#page-academics .a-grid {
+  background: transparent !important;
+  box-shadow: none;          /* if you had a card shadow */
+  border: none;              /* if you had a border */
+}
+
+/* In case the background is drawn with a pseudo-element */
+#page-academics .a-grid::before,
+#page-academics .a-grid::after {
+  content: none !important;
+}
+
+/* REMOVE ACADEMICS PAGE BACKGROUND BLOCK */
+#academics .acad-bg {
+  display: none !important;
+}
+
+#academics.academics-hero::after {
+  background: none !important;
+}
+
+
+/* 1) Remove the top/bottom glowing circles on the spine */
+#page-academics .vtimeline::before,
+#page-academics .vtimeline::after{
+  content: none !important;      /* kills the extra end caps */
+  display: none !important;
+}
+
+/* 2) Make the vertical timeline more subtle */
+#page-academics .vtimeline{
+  width: 2px !important;         /* thinner line */
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.18),
+    rgba(255,255,255,.04)
+  ) !important;                  /* soft, low-contrast gradient */
+  box-shadow: none !important;   /* remove heavy glow */
+}
+
+
+/* Make the academic timeline nodes smaller */
+#page-academics .a-row > .vt-node{
+  width: 6px;          /* was 8px */
+  height: 6px;         /* was 10px */
+  border-width: 1.5px; /* thinner ring */
+  box-shadow:
+    0 0 6px rgba(170,140,255,.75),
+    0 0 14px rgba(130,100,255,.45);
 }
 
 
