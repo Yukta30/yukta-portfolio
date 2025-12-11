@@ -22,7 +22,7 @@
         <a class="link" href="#about">About</a>
         <a class="link" href="#projects">Projects</a>
         <a class="link" href="#skills">Skills</a>
-        <a class="link" href="#education">Academics</a>
+        <a class="link" href="#journeys">Academics</a>
         <a class="link" href="#leadership">Leadership</a>
         <a class="link" href="#contact">Contact</a>
         <a class="btn" href="/resume.pdf" download>Download Resume</a>
@@ -65,26 +65,26 @@
         </div>
         <div class="section-card" style="padding:0">
           <div class="hero-icons">
-            <div class="ic">
+            <a href="#about" class="ic">
               <div class="circle"><img width="28" height="28" src="assets/icons/user.svg" alt="About icon"></div>
               <span>About Me</span>
-            </div>
-            <div class="ic">
+            </a>
+            <a href="#journeys-swap" class="ic">
               <div class="circle"><img width="28" height="28" src="assets/icons/briefcase.svg" alt="Experience icon"></div>
               <span>Experience</span>
-            </div>
-            <div class="ic">
+            </a>
+            <a href="#projects" class="ic">
               <div class="circle"><img width="28" height="28" src="assets/icons/rocket.svg" alt="Projects icon"></div>
               <span>Projects</span>
-            </div>
-            <div class="ic">
+            </a>
+            <a href="#skills" class="ic">
               <div class="circle"><img width="28" height="28" src="assets/icons/gear.svg" alt="Skills icon"></div>
               <span>Skills</span>
-            </div>
-            <div class="ic">
+            </a>
+            <a href="#leadership" class="ic">
               <div class="circle"><img width="28" height="28" src="assets/icons/handshake.svg" alt="Leadership icon"></div>
               <span>Leadership</span>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -402,8 +402,8 @@
           <h3>Crisis Aid Cordination AI Agent</h3>
           <p class="desc">Crisis Aid Coordination Agent bridges donors and disaster relief with AI-driven precision.</p>
           <div class="proj-actions">
-            <a class="btn" href="#">Live Demo</a>
-            <a class="btn ghost" href="#">GitHub Repo</a>
+            <a class="btn" href="https://youtu.be/ijHW8fpVo5k">Live Demo</a>
+            <a class="btn ghost" href="https://github.com/Yukta30/Crisis-AID-MATCHMAKER">GitHub Repo</a>
           </div>
         </article>
         <article class="proj-card reveal">
@@ -420,8 +420,8 @@
           <h3>DataMorph: Adaptive ETL for Sensor Streams</h3>
           <p class="desc">Airflow ETL with dynamic validation and Kafka simulation; cut failures by 40%.</p>
           <div class="proj-actions">
-            <a class="btn" href="#">Live Demo</a>
-            <a class="btn ghost" href="#">GitHub Repo</a>
+            <a class="btn" href="https://youtu.be/tdWHQ-Lasrc">Live Demo</a>
+            <a class="btn ghost" href="https://github.com/Yukta30/DataMorph-Adaptive-ETL-Framework-for-Sensor-Streams">GitHub Repo</a>
           </div>
         </article>
         <article class="proj-card reveal">
@@ -1228,7 +1228,12 @@ function flip(to){
   });
 </script>
 
-  <script>(() => {
+
+
+<script>
+
+
+(() => {
   const form = document.getElementById("contact-form");
   if (!form) return;
 
@@ -1269,8 +1274,7 @@ function flip(to){
       button.textContent = label;
     }
   });
-})();
-  </script>
+})</script>
 
 
 
