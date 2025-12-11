@@ -2054,9 +2054,9 @@ input:focus, textarea:focus{outline:none; box-shadow:0 0 0 4px rgba(139,92,246,.
 
   /* column sizes */
   --timeline-col: 8px;       /* (kept, even if hidden) */
-  --study-w: 560px; 
-  --study-min-h: 180px;          /* study card width */
-  --activity-w: 420px;        /* activity card width */
+  --study-w: 50px; 
+  --study-min-h: 20px;          /* study card width */
+  --activity-w: 20px;        /* activity card width */
   --col-gap: 28px;  
   --lane: 24px;          /* gap between study ↔ connector ↔ activity */
 
@@ -2278,10 +2278,10 @@ input:focus, textarea:focus{outline:none; box-shadow:0 0 0 4px rgba(139,92,246,.
 #academics{
   /* use your current sizes so the math matches your layout */
   --acad-timeline: 42px;      /* left gutter/timeline */
-  --study-width: 560px;
-  --study-min-h: 250px;       /* study card */
+  --study-width: 20px;
+  --study-min-h: 40px;       /* study card */
   --connector-lane: 1px;      /* the thin lane we draw the line in */
-  --activity-width: 420px;    /* activity card */
+  --activity-width: 40px;    /* activity card */
   --acad-gap: 28px;           /* gap between the 4 columns */
 
   /* total width of the cluster = 4 cols + 3 gaps */
@@ -6951,6 +6951,10 @@ img, video, svg { max-width: 100%; height: auto; display: block; }
   box-shadow:
     0 0 6px rgba(170,140,255,.75),
     0 0 14px rgba(130,100,255,.45);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 
