@@ -93,4 +93,3 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   }, 800); // 0.8s delay – tweak if you like
 });
-
