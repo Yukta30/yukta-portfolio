@@ -1459,8 +1459,43 @@ h2{margin:0 0 8px; font-size:clamp(1.4rem,3.2vw,2rem)}
 
 /* Slightly dimmer on small screens for readability */
 @media (max-width: 640px){
-  #skills .bg-video__media{ filter: saturate(1) brightness(0.48) blur(0.6px); }
+  /* Make the section a stacking context */
+  #skills.skills-hero{
+    position: relative;
+    overflow: hidden;
+    background: transparent !important; /* important: don't cover the video */
+  }
+  /* If .card/.section-card sets an opaque background, kill it for this section */
+  #skills.skills-hero.card,
+  #skills.skills-hero.section-card{
+    background: transparent !important;
+  }
+
+  /* Full-bleed background layer */
+  #skills .bg-video{
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  #skills .bg-video__media{
+    display: block !important;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.48) saturate(1) blur(0.6px);
+  }
+
+  /* Put content above */
+  #skills > h2,
+  #skills .skills-grid{
+    position: relative;
+    z-index: 2;
+  }
 }
+
+
 
 
 
