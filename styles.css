@@ -5445,6 +5445,7 @@ input:focus, textarea:focus{outline:none; box-shadow:0 0 0 4px rgba(139,92,246,.
 #page-academics .activity-card{
   padding-left: 18px;
   padding-right: 18px;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 #page-academics .activity-card .chip-points > li{
   padding: 14px 18px;             /* inner room */
@@ -5454,6 +5455,7 @@ input:focus, textarea:focus{outline:none; box-shadow:0 0 0 4px rgba(139,92,246,.
   white-space: normal;            /* allow wrapping */
   overflow-wrap: anywhere;
   text-align: left;               /* keep copy left-aligned */
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 /* If there’s an odd count (1 or 3), center the last card on its own row */
@@ -7030,6 +7032,110 @@ html {
     display: none !important;
   }
 }
+
+/* ===== Corporate Journey mobile: fix icon overlap + keep centered cards ===== */
+@media (max-width: 520px){
+
+  /* Center + shrink cards (keep) */
+  #page-corporate .corp-scroll{ padding: 0 !important; overflow-x: hidden !important; }
+  #page-corporate .corp-scroll-inner{ padding: 0 14px 28px !important; box-sizing: border-box; }
+
+  #page-corporate #work-timeline.corp-tl{
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    row-gap: 16px !important;
+  }
+
+   /* 1) Shrink the VISIBLE heading (not the sr-only one) */
+  #page-corporate .corporate-hero :is(
+    h1, 
+    h2:not(.sr-only),
+    .title,
+    .hero-title,
+    .section-title,
+    .page-title
+  ){
+    font-size: 1.15rem !important;
+    line-height: 0.2 !important;
+    margin: 0 0 10px !important;
+  }
+
+  #page-corporate #work-timeline .job,
+  #page-corporate #work-timeline .job.left,
+  #page-corporate #work-timeline .job.right{
+    grid-column: 1 !important;
+    justify-self: center !important;
+    width: 100% !important;
+    max-width: 360px !important;
+  }
+
+  #page-corporate .corp-card{
+    padding: 14px !important;
+    border-radius: 16px !important;
+  }
+
+  /* ✅ REAL FIX: make each point a flex row so icon can't overlap text */
+  #page-corporate .corp-points{
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 10px 0 0 !important;
+    display: grid !important;
+    gap: 10px !important;
+  }
+
+  #page-corporate .corp-points li{
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+
+    padding: 10px 12px !important;     /* your point “box” padding */
+    font-size: 0.80rem !important;
+    line-height: 1.35 !important;
+
+    /* IMPORTANT: remove any left padding meant for absolute icons */
+    padding-left: 12px !important;
+  }
+
+  /* Force the icon bubble to be inline (NOT absolute) */
+  #page-corporate .corp-points li::before{
+    position: static !important;
+    transform: none !important;
+    margin: 0 !important;
+    align-self: center !important;
+    line-height: 1 !important;
+    text-align: center !important;
+
+    flex: 0 0 auto !important;
+    width: 26px !important;
+    height: 26px !important;
+    display: grid !important;
+    place-items: center !important;
+
+    /* keep it rounded if you already had a bubble */
+    border-radius: 8px !important;
+  }
+
+  /* Button smaller on mobile */
+  #page-corporate .corporate-hero a,
+  #page-corporate .corporate-hero button{
+    font-size: 0.78rem !important;
+    padding: 7px 12px !important;
+    border-radius: 999px !important;
+  }
+
+  #page-corporate #work-timeline .corp-item{
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  padding: 0 !important;          /* kills any left offset */
+  margin: 0 !important;
+}
+}
+
+
+
+
+
 
 
 
