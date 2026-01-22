@@ -1294,7 +1294,59 @@ function flip(to){
   });
 })</script>
 
+<div id="comingSoonModal" class="cs-modal" aria-hidden="true">
+  <div class="cs-backdrop" data-cs-close></div>
 
+  <div class="cs-box" role="dialog" aria-modal="true" aria-labelledby="csTitle">
+    <button class="cs-close" type="button" aria-label="Close" data-cs-close>✕</button>
+
+    <div class="cs-icon">🚧</div>
+    <h3 id="csTitle">Coming Soon</h3>
+    <p class="cs-text">This live demo isn’t public yet. Check back soon!</p>
+
+    <div class="cs-actions">
+      <button class="cs-btn" type="button" data-cs-close>Okay</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const modal = document.getElementById("comingSoonModal");
+    if (!modal) return;
+
+    const openModal = () => {
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden"; // prevent background scroll
+    };
+
+    const closeModal = () => {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = ""; // restore scroll
+    };
+
+    // Click on any button with href="#"
+    document.addEventListener("click", (e) => {
+      const link = e.target.closest('a.btn[href="#"]');
+      if (!link) return;
+
+      e.preventDefault();
+      openModal();
+    });
+
+    // Close on backdrop, X, or Okay
+    modal.addEventListener("click", (e) => {
+      if (e.target.matches("[data-cs-close]")) closeModal();
+    });
+
+    // Close on Esc
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+    });
+  })();
+</script>
 
 </body>
 </html>
